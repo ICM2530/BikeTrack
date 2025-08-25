@@ -4,36 +4,36 @@ Este documento describe las principales interfaces de usuario y sus funcionalida
 
 ## Índice de Interfaces
 
-1. Autenticación y Cuenta
+1. **Autenticación y Cuenta**
 
-Registro e Inicio de Sesión
+- Registro e Inicio de Sesión
 
-2. Publicaciones y Comunidad
+2. **Publicaciones y Comunidad**
 
-Crear Publicaciones
-Ver Todas las Publicaciones
-Ver Mis Publicaciones
-Comentarios e Interacciones
+- Crear Publicaciones
+- Ver Todas las Publicaciones
+- Ver Mis Publicaciones
+- Comentarios e Interacciones
 
-3. Rutas y Navegación
+3. **Rutas y Navegación**
 
-Visualizar Rutas
-Crear Rutas
-Guardar Rutas
-Ubicación Actual
+- Visualizar Rutas
+- Crear Rutas
+- Guardar Rutas
+- Ubicación Actual
 
-4. Actividades y Seguimiento
+4. **Actividades y Seguimiento**
 
-Realizar Actividades
-Tiempos Detallados
+- Realizar Actividades
+- Tiempos Detallados
 
-5. Alertas y Seguridad
+5. **Alertas y Seguridad**
 
-Visualizar Alertas
-Enviar Alertas
-Compartir Ubicación
+- Visualizar Alertas
+- Enviar Alertas
+- Compartir Ubicación
 
-6. Social
+6. **Social**
 
-Solicitudes de Amistad
-Chat
+- Solicitudes de Amistad
+- Chat
