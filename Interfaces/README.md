@@ -2,37 +2,38 @@
 BikeTrack es una aplicación móvil diseñada para ciclistas que permite crear, seguir y compartir rutas, realizar seguimiento de actividades, y conectar con una comunidad de ciclistas. 
 Este documento describe las principales interfaces de usuario y sus funcionalidades.
 
-# Índice de Interfaces
-1. Autenticación y Cuenta
+## Índice de Interfaces
+
+# Autenticación y Cuenta
 
 Registro e Inicio de Sesión
 
-2. Publicaciones y Comunidad
+# Publicaciones y Comunidad
 
 Crear Publicaciones
 Ver Todas las Publicaciones
 Ver Mis Publicaciones
 Comentarios e Interacciones
 
-3. Rutas y Navegación
+# Rutas y Navegación
 
 Visualizar Rutas
 Crear Rutas
 Guardar Rutas
 Ubicación Actual
 
-4. Actividades y Seguimiento
+# Actividades y Seguimiento
 
 Realizar Actividades
 Tiempos Detallados
 
-5. Alertas y Seguridad
+# Alertas y Seguridad
 
 Visualizar Alertas
 Enviar Alertas
 Compartir Ubicación
 
-6. Social
+# Social
 
 Solicitudes de Amistad
 Chat
