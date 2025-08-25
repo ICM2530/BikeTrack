@@ -1,6 +1,6 @@
 ## BikeTrack - Interfaces de Usuario
 BikeTrack es una aplicación móvil diseñada para ciclistas que permite crear, seguir y compartir rutas, realizar seguimiento de actividades, y conectar con una comunidad de ciclistas. 
-Este documento describe las principales interfaces de usuario y sus funcionalidades.
+Este documento muestra conceptos iniciales de las principales interfaces de usuario y sus funcionalidades.
 
 ## Índice de Interfaces
 
