@@ -158,7 +158,7 @@ class MakeActivity : ComponentActivity(), SensorEventListener {
         locationCallback = createLocationCallback(locationViewModel)
 
         setContent {
-            GPSDataUpdates(locationViewModel, azimuth) // Your navigation host
+            GPSDataUpdates(locationViewModel, azimuth)
         }
     }
     override fun onResume() {
@@ -245,42 +245,39 @@ class MakeActivity : ComponentActivity(), SensorEventListener {
             if(active){
                 OsmDroidMap(viewModel, modifier = Modifier.fillMaxSize(), alertCoords)
             }
-            Column(modifier = Modifier.fillMaxSize().padding(8.dp), verticalArrangement = Arrangement.Bottom) {
-                //MyRow("Latitude:", state.value.latitude.toString())
-                //MyRow("Longitude:", state.value.longitude.toString())
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
-                    Column(modifier = Modifier.padding(8.dp)) {
-                        Box(modifier = Modifier.fillMaxWidth()){
-                            Text(text = direction,
-                                fontSize = 25.sp,
-                                fontWeight = FontWeight.Bold,
-                                modifier = Modifier.align(androidx.compose.ui.Alignment.BottomStart))
-                        }
-                        Spacer(modifier = Modifier.height(16.dp))
-                        Box(modifier = Modifier.fillMaxWidth()){
-
-                            Text(
-                                text = "$grados°",
-                                fontSize = 32.sp,
-                                fontWeight = FontWeight.Medium,
-                                modifier = Modifier.align(androidx.compose.ui.Alignment.BottomStart)
-                            )
-                        }
-                        Text("Clima:${if (IsRainy) " lluvioso" else " soleado"}", fontSize = 15.sp, modifier = Modifier.padding(8.dp))
+            Row(modifier = Modifier.fillMaxWidth().padding(8.dp).align(Alignment.BottomCenter), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.Bottom) {
+                Column(modifier = Modifier.padding(8.dp)) {
+                    //MyRow("Latitude:", state.value.latitude.toString())
+                    //MyRow("Longitude:", state.value.longitude.toString())
+                    Box(modifier = Modifier){
+                        Text(text = direction,
+                            fontSize = 25.sp,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.align(androidx.compose.ui.Alignment.BottomStart))
                     }
+                    Box(modifier = Modifier){
 
+                        Text(
+                            text = "$grados°",
+                            fontSize = 32.sp,
+                            fontWeight = FontWeight.Medium,
+                            modifier = Modifier.align(androidx.compose.ui.Alignment.BottomStart)
+                        )
+                    }
+                    Text("Clima:${if (IsRainy) " lluvioso" else " soleado"}", fontSize = 15.sp, modifier = Modifier.padding(top=8.dp,bottom=8.dp))
+                    Text("Humedad: ${res.toString()}%", fontSize = 15.sp)
                 }
-                Text("Humedad: ${res.toString()}%", fontSize = 15.sp)
-                Row(modifier = Modifier.fillMaxSize().padding(8.dp)){
+                Spacer(modifier = Modifier.width(150.dp))
+                Column(modifier = Modifier.fillMaxWidth().padding(8.dp)){
                     Button(onClick = {val nAlCoord = GeoPoint(state.value.latitude, state.value.longitude)
-                        alertCoords = alertCoords + nAlCoord}, modifier = Modifier.weight(12f), colors = ButtonDefaults.buttonColors
+                        alertCoords = alertCoords + nAlCoord}, modifier = Modifier.width(100.dp), colors = ButtonDefaults.buttonColors
                         (containerColor = colorResource(buttoncolors))) { Text("Alerta") }
 
                     if(active) {
                         Button(onClick = {
                             stopLocationUpdates()
                             active = false
-                        }, modifier = Modifier.weight(10f), colors = ButtonDefaults.buttonColors
+                        }, modifier = Modifier.width(100.dp), colors = ButtonDefaults.buttonColors
                             (containerColor = colorResource(buttoncolors))) { Text("Stop", color = Color.Red ) }
 
                     }
@@ -288,11 +285,12 @@ class MakeActivity : ComponentActivity(), SensorEventListener {
                         Button(onClick = {
                             startLocationUpdates()
                             active = true
-                        },modifier = Modifier.weight(10f), colors =ButtonDefaults.buttonColors
+                        },modifier = Modifier.width(100.dp), colors =ButtonDefaults.buttonColors
                             (containerColor = colorResource(buttoncolors))) { Text("Start", color = Color.Green) }
                     }
                 }
             }
+
         }
 
     }
@@ -393,7 +391,6 @@ class MakeActivity : ComponentActivity(), SensorEventListener {
                     mapView.overlays.add(roadOverlay)
                 }
                 mapView.invalidate()
-                // This block runs on recomposition
             }
         )
     }
