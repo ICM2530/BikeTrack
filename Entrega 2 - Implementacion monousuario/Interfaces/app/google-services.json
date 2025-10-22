@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "96906562517",
+    "project_id": "interfaces-e3886",
+    "storage_bucket": "interfaces-e3886.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96906562517:android:dc5c5cd642c5568858cb5c",
+        "android_client_info": {
+          "package_name": "com.example.interfaces"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp_v9UbhbebMuIwdclSHL18bG9bfTZh9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
